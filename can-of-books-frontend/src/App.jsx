@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios';
 
 import Books from '../../src/components/Books.jsx'
+import BookCarousel from '../../src/components/Carousel.jsx';
 
 let SERVER = import.meta.env.VITE_SERVER;
 
@@ -22,6 +23,7 @@ function App() {
       <div className="card">
       <button onClick={fetchBooks}>See Your Books</button> 
       <Books books={books} />
+      <BookCarousel  /> 
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
@@ -31,6 +33,7 @@ function App() {
       </p>
     </>
   )
+
 }
 
 export default App
